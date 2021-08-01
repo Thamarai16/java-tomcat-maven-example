@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   become: yes
+   remote_user: ansadmin
+   tasks:
+    - name: start docker
+      shell: docker run -itd --name dockercontainer -p 8080:8080 thamarair/project:1
+   
